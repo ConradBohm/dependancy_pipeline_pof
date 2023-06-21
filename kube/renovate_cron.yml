@@ -29,10 +29,8 @@ spec:
             - name: renovate
               # Update this to the latest available and then enable Renovate on
               # the manifest
-              image: renovate/renovate:35.14.4
+              image: renovate/renovate:latest
               imagePullPolicy: Always
-              args:
-                - user/repo
               # Environment Variables
               env:
                 - name: LOG_LEVEL
@@ -43,8 +41,12 @@ spec:
               volumeMounts:
                 - name: config-volume
                   mountPath: /opt/renovate/
+                - name: work-volume
+                  mountPath: /tmp/renovate/
           restartPolicy: Never
           volumes:
             - name: config-volume
               configMap:
                 name: renovate-config
+            - name: work-volume
+              emptyDir: {}
