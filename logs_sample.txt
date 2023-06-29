@@ -1,0 +1,947 @@
+DEBUG: Using RE2 as regex engine
+DEBUG: Parsing configs
+DEBUG: Checking for config file in /usr/src/app/config.js
+DEBUG: No config file found on disk - skipping
+DEBUG: Enabling debug logging to /tmp/renovate/logs
+DEBUG: File config
+       "config": {}
+DEBUG: CLI config
+       "config": {}
+DEBUG: Env config
+       "config": {
+         "hostRules": [],
+         "dryRun": "lookup",
+         "baseDir": "/tmp/renovate/",
+         "logFile": "/tmp/renovate/logs",
+         "onboarding": false,
+         "persistRepoData": false,
+         "platform": "github",
+         "endpoint": "https://api.github.com/",
+         "token": "***********",
+         "autodiscover": false,
+         "repositories": [
+           "ConradBohm/renovate_test_repo",
+           "ConradBohm/renovate_second_test_repo"
+         ],
+         "gitAuthor": "Renovate Bot <bot@renovateapp.com>"
+       }
+DEBUG: Combined config
+       "config": {
+         "hostRules": [],
+         "dryRun": "lookup",
+         "baseDir": "/tmp/renovate/",
+         "logFile": "/tmp/renovate/logs",
+         "onboarding": false,
+         "persistRepoData": false,
+         "platform": "github",
+         "endpoint": "https://api.github.com/",
+         "token": "***********",
+         "autodiscover": false,
+         "repositories": [
+           "ConradBohm/renovate_test_repo",
+           "ConradBohm/renovate_second_test_repo"
+         ],
+         "gitAuthor": "Renovate Bot <bot@renovateapp.com>"
+       }
+DEBUG: Adding trailing slash to endpoint
+DEBUG: Enabling forkProcessing while in non-autodiscover mode
+DEBUG: Found valid git version: 2.40.0
+DEBUG: Platform config
+       "platformConfig": {
+         "hostType": "github",
+         "endpoint": "https://api.github.com/",
+         "isGHApp": false,
+         "isGhe": false,
+         "userDetails": {"username": "ConradBohm", "name": null}
+       },
+       "renovateUsername": "ConradBohm"
+DEBUG: Using configured gitAuthor (Renovate Bot <bot@renovateapp.com>)
+DEBUG: Adding token authentication for api.github.com to hostRules
+DEBUG: Using configured baseDir: /tmp/renovate/
+DEBUG: Using cacheDir: /tmp/renovate/cache
+DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for api.github.com to hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for api.github.com to hostRules
+ INFO: Repository started (repository=ConradBohm/renovate_test_repo)
+       "renovateVersion": "35.50.2"
+DEBUG: Using localDir: /tmp/renovate/repos/github/ConradBohm/renovate_test_repo (repository=ConradBohm/renovate_test_repo)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=ConradBohm/renovate_test_repo)
+DEBUG: initRepo("ConradBohm/renovate_test_repo") (repository=ConradBohm/renovate_test_repo)
+DEBUG: ConradBohm/renovate_test_repo default branch = main (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using personal access token for git init (repository=ConradBohm/renovate_test_repo)
+DEBUG: Resetting npmrc (repository=ConradBohm/renovate_test_repo)
+DEBUG: checkOnboarding() (repository=ConradBohm/renovate_test_repo)
+DEBUG: isOnboarded() (repository=ConradBohm/renovate_test_repo)
+DEBUG: findFile(renovate.json) (repository=ConradBohm/renovate_test_repo)
+DEBUG: Initializing git repository into /tmp/renovate/repos/github/ConradBohm/renovate_test_repo (repository=ConradBohm/renovate_test_repo)
+DEBUG: Performing blobless clone (repository=ConradBohm/renovate_test_repo)
+DEBUG: git clone completed (repository=ConradBohm/renovate_test_repo)
+       "durationMs": 1544
+DEBUG: latest repository commit (repository=ConradBohm/renovate_test_repo)
+       "latestCommit": {
+         "hash": "40a93714b4f4de4a95d373f806a356e69362c650",
+         "date": "2023-06-29T14:34:22+01:00",
+         "message": "Update requirements.txt",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "",
+         "author_name": "ConradBohm",
+         "author_email": "37579805+ConradBohm@users.noreply.github.com"
+       }
+DEBUG: Config file exists, fileName: renovate.json (repository=ConradBohm/renovate_test_repo)
+DEBUG: Retrieving issueList (repository=ConradBohm/renovate_test_repo)
+DEBUG: Retrieved 0 issues (repository=ConradBohm/renovate_test_repo)
+DEBUG: Repo is onboarded (repository=ConradBohm/renovate_test_repo)
+DEBUG: Found renovate.json config file (repository=ConradBohm/renovate_test_repo)
+DEBUG: Repository config (repository=ConradBohm/renovate_test_repo)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "packageRules": [{"matchUpdateTypes": ["major"]}],
+         "pip_requirements": {"fileMatch": ["requirements.yml"]}
+       }
+DEBUG: migrateAndValidate() (repository=ConradBohm/renovate_test_repo)
+DEBUG: No config migration necessary (repository=ConradBohm/renovate_test_repo)
+DEBUG: massaged config (repository=ConradBohm/renovate_test_repo)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "packageRules": [],
+         "pip_requirements": {"fileMatch": ["requirements.yml"]}
+       }
+DEBUG: migrated config (repository=ConradBohm/renovate_test_repo)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "packageRules": [],
+         "pip_requirements": {"fileMatch": ["requirements.yml"]}
+       }
+DEBUG: Found repo ignorePaths (repository=ConradBohm/renovate_test_repo)
+       "ignorePaths": ["**/node_modules/**", "**/bower_components/**"]
+DEBUG: No vulnerability alerts found (repository=ConradBohm/renovate_test_repo)
+DEBUG: No vulnerability alerts found (repository=ConradBohm/renovate_test_repo)
+DEBUG: No baseBranches (repository=ConradBohm/renovate_test_repo)
+DEBUG: extract() (repository=ConradBohm/renovate_test_repo)
+DEBUG: Setting current branch to main (repository=ConradBohm/renovate_test_repo)
+DEBUG: latest commit (repository=ConradBohm/renovate_test_repo)
+       "branchName": "main",
+       "latestCommitDate": "2023-06-29T14:34:22+01:00"
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager ansible-galaxy (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)galaxy\.ya?ml$ for manager ansible-galaxy (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.tool-versions$ for manager asdf (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: azure.*pipelines?.*\.ya?ml$ for manager azure-pipelines (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)batect(-bundle)?\.yml$ for manager batect (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)batect$ for manager batect-wrapper (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)WORKSPACE(|\.bazel)$ for manager bazel (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.bazelversion$ for manager bazelisk (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.bicep$ for manager bicep (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.?bitbucket-pipelines\.ya?ml$ for manager bitbucket-pipelines (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.cake$ for manager cake (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Cargo\.toml$ for manager cargo (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.circleci/config\.yml$ for manager circleci (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)cloudbuild\.ya?ml for manager cloudbuild (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Podfile$ for manager cocoapods (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)([\w-]*)composer\.json$ for manager composer (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)conanfile\.(txt|py)$ for manager conan (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)(?:deps|bb)\.edn$ for manager deps-edn (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)(?:docker-)?compose[^/]*\.ya?ml$ for manager docker-compose (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/|\.)(Docker|Container)file$ for manager dockerfile (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)(Docker|Container)file[^/]*$ for manager dockerfile (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.drone\.yml$ for manager droneci (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)fleet\.ya?ml for manager fleet (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)flux-system/(?:.+/)?gotk-components\.yaml$ for manager flux (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.fvm/fvm_config\.json$ for manager fvm (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.gitmodules$ for manager git-submodules (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: ^(workflow-templates|\.github/workflows)/[^/]+\.ya?ml$ for manager github-actions (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)action\.ya?ml$ for manager github-actions (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci-include (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)go\.mod$ for manager gomod (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)gradle\.properties$ for manager gradle (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)gradle/.+\.toml$ for manager gradle (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.versions\.toml$ for manager gradle (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)versions.props$ for manager gradle (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)versions.lock$ for manager gradle (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper\.properties$ for manager gradle-wrapper (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)requirements\.yaml$ for manager helm-requirements (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)values\.yaml$ for manager helm-values (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)helmfile\.yaml$ for manager helmfile (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Chart\.yaml$ for manager helmv3 (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)bin/hermit$ for manager hermit (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.html?$ for manager html (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)plugins\.(txt|ya?ml)$ for manager jenkins (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)jsonnetfile\.json$ for manager jsonnet-bundler (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: ^.+\.main\.kts$ for manager kotlin-script (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)kustomization\.ya?ml$ for manager kustomize (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/|\.)pom\.xml$ for manager maven (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: ^(((\.mvn)|(\.m2))/)?settings\.xml$ for manager maven (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|\/).mvn/wrapper/maven-wrapper.properties$ for manager maven-wrapper (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)package\.js$ for manager meteor (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Mintfile$ for manager mint (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)flake\.nix$ for manager nix (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.node-version$ for manager nodenv (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)package\.json$ for manager npm (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.(?:props|targets)$ for manager nuget (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)dotnet-tools\.json$ for manager nuget (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)global\.json$ for manager nuget (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.nvmrc$ for manager nvm (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)src/main/features/.+\.json$ for manager osgi (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)([\w-]*)requirements\.(txt|pip)$ for manager pip_requirements (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: requirements.yml for manager pip_requirements (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)setup\.py$ for manager pip_setup (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.pre-commit-config\.yaml$ for manager pre-commit (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Puppetfile$ for manager puppet (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.python-version$ for manager pyenv (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: project/[^/]*\.scala$ for manager sbt (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: project/build\.properties$ for manager sbt (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)setup\.cfg$ for manager setup-cfg (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.terraform-version$ for manager terraform-version (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)terragrunt\.hcl$ for manager terragrunt (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.terragrunt-version$ for manager terragrunt-version (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: \.tflint\.hcl$ for manager tflint-plugin (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: ^\.travis\.yml$ for manager travis (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: (^|/)\.vela\.ya?ml$ for manager velaci (repository=ConradBohm/renovate_test_repo)
+DEBUG: Using file match: ^\.woodpecker(?:/[^/]+)?\.ya?ml$ for manager woodpecker (repository=ConradBohm/renovate_test_repo)
+DEBUG: Matched 1 file(s) for manager pip_requirements: requirements.txt (repository=ConradBohm/renovate_test_repo)
+DEBUG: manager extract durations (ms) (repository=ConradBohm/renovate_test_repo)
+       "managers": {"pip_requirements": 45}
+DEBUG: Found pip_requirements package files (repository=ConradBohm/renovate_test_repo)
+DEBUG: Found 1 package file(s) (repository=ConradBohm/renovate_test_repo)
+ INFO: Dependency extraction complete (repository=ConradBohm/renovate_test_repo, baseBranch=main)
+       "stats": {
+         "managers": {"pip_requirements": {"fileCount": 1, "depCount": 4}},
+         "total": {"fileCount": 1, "depCount": 4}
+       }
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=ConradBohm/renovate_test_repo, baseBranch=main)
+DEBUG: Package releases lookups complete (repository=ConradBohm/renovate_test_repo, baseBranch=main)
+DEBUG: branchifyUpgrades (repository=ConradBohm/renovate_test_repo)
+DEBUG: detectSemanticCommits() (repository=ConradBohm/renovate_test_repo)
+DEBUG: getCommitMessages (repository=ConradBohm/renovate_test_repo)
+DEBUG: semanticCommits: detected "unknown" (repository=ConradBohm/renovate_test_repo)
+DEBUG: semanticCommits: disabled (repository=ConradBohm/renovate_test_repo)
+DEBUG: 5 flattened updates found: numpy, scipy, scikit-learn, scikit-learn, boto3 (repository=ConradBohm/renovate_test_repo)
+DEBUG: Returning 5 branch(es) (repository=ConradBohm/renovate_test_repo)
+DEBUG: config.repoIsOnboarded=true (repository=ConradBohm/renovate_test_repo)
+DEBUG: packageFiles with updates (repository=ConradBohm/renovate_test_repo, baseBranch=main)
+       "config": {
+         "pip_requirements": [
+           {
+             "deps": [
+               {
+                 "depName": "numpy",
+                 "currentValue": "==1.0",
+                 "datasource": "pypi",
+                 "currentVersion": "1.0",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1.25.0",
+                     "newValue": "==1.25.0",
+                     "releaseTimestamp": "2023-06-17T14:38:18.000Z",
+                     "newMajor": 1,
+                     "newMinor": 25,
+                     "updateType": "minor",
+                     "isRange": true,
+                     "branchName": "renovate/numpy-1.x"
+                   }
+                 ],
+                 "packageName": "numpy",
+                 "warnings": [],
+                 "versioning": "pep440",
+                 "sourceUrl": "https://github.com/numpy/numpy",
+                 "registryUrl": "https://pypi.org/pypi",
+                 "homepage": "https://www.numpy.org",
+                 "isSingleVersion": true,
+                 "fixedVersion": "1.0"
+               },
+               {
+                 "depName": "scipy",
+                 "currentValue": "==0.19.1",
+                 "datasource": "pypi",
+                 "currentVersion": "0.19.1",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "1.11.1",
+                     "newValue": "==1.11.1",
+                     "releaseTimestamp": "2023-06-28T21:43:44.000Z",
+                     "newMajor": 1,
+                     "newMinor": 11,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/scipy-1.x"
+                   }
+                 ],
+                 "packageName": "scipy",
+                 "warnings": [],
+                 "versioning": "pep440",
+                 "sourceUrl": "https://github.com/scipy/scipy",
+                 "registryUrl": "https://pypi.org/pypi",
+                 "homepage": "https://scipy.org/",
+                 "isSingleVersion": true,
+                 "fixedVersion": "0.19.1"
+               },
+               {
+                 "depName": "scikit-learn",
+                 "currentValue": "==0.21.3",
+                 "datasource": "pypi",
+                 "currentVersion": "0.21.3",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "0.24.2",
+                     "newValue": "==0.24.2",
+                     "releaseTimestamp": "2021-04-28T11:18:29.000Z",
+                     "newMajor": 0,
+                     "newMinor": 24,
+                     "updateType": "minor",
+                     "isRange": true,
+                     "branchName": "renovate/scikit-learn-0.x"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "1.2.2",
+                     "newValue": "==1.2.2",
+                     "releaseTimestamp": "2023-03-09T09:57:10.000Z",
+                     "newMajor": 1,
+                     "newMinor": 2,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/scikit-learn-1.x"
+                   }
+                 ],
+                 "packageName": "scikit-learn",
+                 "warnings": [],
+                 "versioning": "pep440",
+                 "sourceUrl": "https://github.com/scikit-learn/scikit-learn",
+                 "registryUrl": "https://pypi.org/pypi",
+                 "homepage": "http://scikit-learn.org",
+                 "isSingleVersion": true,
+                 "fixedVersion": "0.21.3"
+               },
+               {
+                 "depName": "boto3",
+                 "currentValue": "==1.25.0",
+                 "datasource": "pypi",
+                 "currentVersion": "1.25.0",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1.26.163",
+                     "newValue": "==1.26.163",
+                     "releaseTimestamp": "2023-06-28T19:28:45.000Z",
+                     "newMajor": 1,
+                     "newMinor": 26,
+                     "updateType": "minor",
+                     "isRange": true,
+                     "branchName": "renovate/boto3-1.x"
+                   }
+                 ],
+                 "packageName": "boto3",
+                 "warnings": [],
+                 "versioning": "pep440",
+                 "sourceUrl": "https://github.com/boto/boto3",
+                 "registryUrl": "https://pypi.org/pypi",
+                 "isSingleVersion": true,
+                 "fixedVersion": "1.25.0"
+               }
+             ],
+             "packageFile": "requirements.txt"
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=ConradBohm/renovate_test_repo)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=ConradBohm/renovate_test_repo)
+DEBUG: Repository timing splits (milliseconds) (repository=ConradBohm/renovate_test_repo)
+       "splits": {"init": 3460, "extract": 479, "lookup": 1516},
+       "total": 5467
+DEBUG: Package cache statistics (repository=ConradBohm/renovate_test_repo)
+       "get": {"count": 4, "avgMs": 8, "medianMs": 7, "maxMs": 11},
+       "set": {"count": 4, "avgMs": 126, "medianMs": 41, "maxMs": 290}
+DEBUG: http statistics (repository=ConradBohm/renovate_test_repo)
+       "urls": {
+         "https://api.github.com/graphql (POST,200)": 2,
+         "https://pypi.org/pypi/boto3/json (GET,200)": 1,
+         "https://pypi.org/pypi/numpy/json (GET,200)": 1,
+         "https://pypi.org/pypi/scikit-learn/json (GET,200)": 1,
+         "https://pypi.org/pypi/scipy/json (GET,200)": 1
+       },
+       "hostStats": {
+         "api.github.com": {"requestCount": 2, "requestAvgMs": 397, "queueAvgMs": 1},
+         "pypi.org": {"requestCount": 4, "requestAvgMs": 701, "queueAvgMs": 0}
+       },
+       "totalRequests": 6
+DEBUG: Package lookup durations (repository=ConradBohm/renovate_test_repo)
+       "pypi": {"count": 4, "averageMs": 917, "totalMs": 3666, "maximumMs": 1369}
+DEBUG: dns cache (repository=ConradBohm/renovate_test_repo)
+       "hosts": []
+ INFO: Repository finished (repository=ConradBohm/renovate_test_repo)
+       "cloned": true,
+       "durationMs": 5467
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for api.github.com to hostRules
+ INFO: Repository started (repository=ConradBohm/renovate_second_test_repo)
+       "renovateVersion": "35.50.2"
+DEBUG: Using localDir: /tmp/renovate/repos/github/ConradBohm/renovate_second_test_repo (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: initRepo("ConradBohm/renovate_second_test_repo") (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: ConradBohm/renovate_second_test_repo default branch = main (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using personal access token for git init (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Resetting npmrc (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: checkOnboarding() (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: isOnboarded() (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: findFile(renovate.json) (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Initializing git repository into /tmp/renovate/repos/github/ConradBohm/renovate_second_test_repo (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Performing blobless clone (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: git clone completed (repository=ConradBohm/renovate_second_test_repo)
+       "durationMs": 2175
+DEBUG: latest repository commit (repository=ConradBohm/renovate_second_test_repo)
+       "latestCommit": {
+         "hash": "7bcd5a7a9352e1d906dc31239d383a5b839ebc6b",
+         "date": "2023-06-29T13:50:57+01:00",
+         "message": "Create renovate.json",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "",
+         "author_name": "ConradBohm",
+         "author_email": "37579805+ConradBohm@users.noreply.github.com"
+       }
+DEBUG: Config file exists, fileName: renovate.json (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Retrieving issueList (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Retrieved 0 issues (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Repo is onboarded (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Found renovate.json config file (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Repository config (repository=ConradBohm/renovate_second_test_repo)
+       "fileName": "renovate.json",
+       "config": {"$schema": "https://docs.renovatebot.com/renovate-schema.json"}
+DEBUG: migrateAndValidate() (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: No config migration necessary (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: massaged config (repository=ConradBohm/renovate_second_test_repo)
+       "config": {"$schema": "https://docs.renovatebot.com/renovate-schema.json"}
+DEBUG: migrated config (repository=ConradBohm/renovate_second_test_repo)
+       "config": {"$schema": "https://docs.renovatebot.com/renovate-schema.json"}
+DEBUG: Found repo ignorePaths (repository=ConradBohm/renovate_second_test_repo)
+       "ignorePaths": ["**/node_modules/**", "**/bower_components/**"]
+DEBUG: No vulnerability alerts found (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: No vulnerability alerts found (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: No baseBranches (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: extract() (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Setting current branch to main (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: latest commit (repository=ConradBohm/renovate_second_test_repo)
+       "branchName": "main",
+       "latestCommitDate": "2023-06-29T13:50:57+01:00"
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager ansible-galaxy (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)galaxy\.ya?ml$ for manager ansible-galaxy (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.tool-versions$ for manager asdf (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: azure.*pipelines?.*\.ya?ml$ for manager azure-pipelines (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)batect(-bundle)?\.yml$ for manager batect (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)batect$ for manager batect-wrapper (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)WORKSPACE(|\.bazel)$ for manager bazel (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.bazelversion$ for manager bazelisk (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.bicep$ for manager bicep (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.?bitbucket-pipelines\.ya?ml$ for manager bitbucket-pipelines (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.cake$ for manager cake (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Cargo\.toml$ for manager cargo (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.circleci/config\.yml$ for manager circleci (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)cloudbuild\.ya?ml for manager cloudbuild (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Podfile$ for manager cocoapods (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)([\w-]*)composer\.json$ for manager composer (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)conanfile\.(txt|py)$ for manager conan (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)(?:deps|bb)\.edn$ for manager deps-edn (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)(?:docker-)?compose[^/]*\.ya?ml$ for manager docker-compose (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/|\.)(Docker|Container)file$ for manager dockerfile (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)(Docker|Container)file[^/]*$ for manager dockerfile (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.drone\.yml$ for manager droneci (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)fleet\.ya?ml for manager fleet (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)flux-system/(?:.+/)?gotk-components\.yaml$ for manager flux (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.fvm/fvm_config\.json$ for manager fvm (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.gitmodules$ for manager git-submodules (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: ^(workflow-templates|\.github/workflows)/[^/]+\.ya?ml$ for manager github-actions (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)action\.ya?ml$ for manager github-actions (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci-include (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)go\.mod$ for manager gomod (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)gradle\.properties$ for manager gradle (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)gradle/.+\.toml$ for manager gradle (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.versions\.toml$ for manager gradle (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)versions.props$ for manager gradle (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)versions.lock$ for manager gradle (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper\.properties$ for manager gradle-wrapper (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)requirements\.yaml$ for manager helm-requirements (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)values\.yaml$ for manager helm-values (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)helmfile\.yaml$ for manager helmfile (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Chart\.yaml$ for manager helmv3 (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)bin/hermit$ for manager hermit (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.html?$ for manager html (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)plugins\.(txt|ya?ml)$ for manager jenkins (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)jsonnetfile\.json$ for manager jsonnet-bundler (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: ^.+\.main\.kts$ for manager kotlin-script (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)kustomization\.ya?ml$ for manager kustomize (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/|\.)pom\.xml$ for manager maven (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: ^(((\.mvn)|(\.m2))/)?settings\.xml$ for manager maven (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|\/).mvn/wrapper/maven-wrapper.properties$ for manager maven-wrapper (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)package\.js$ for manager meteor (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Mintfile$ for manager mint (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)flake\.nix$ for manager nix (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.node-version$ for manager nodenv (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)package\.json$ for manager npm (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.(?:props|targets)$ for manager nuget (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)dotnet-tools\.json$ for manager nuget (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)global\.json$ for manager nuget (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.nvmrc$ for manager nvm (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)src/main/features/.+\.json$ for manager osgi (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)([\w-]*)requirements\.(txt|pip)$ for manager pip_requirements (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)setup\.py$ for manager pip_setup (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.pre-commit-config\.yaml$ for manager pre-commit (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Puppetfile$ for manager puppet (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.python-version$ for manager pyenv (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: project/[^/]*\.scala$ for manager sbt (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: project/build\.properties$ for manager sbt (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)setup\.cfg$ for manager setup-cfg (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.terraform-version$ for manager terraform-version (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)terragrunt\.hcl$ for manager terragrunt (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.terragrunt-version$ for manager terragrunt-version (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: \.tflint\.hcl$ for manager tflint-plugin (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: ^\.travis\.yml$ for manager travis (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: (^|/)\.vela\.ya?ml$ for manager velaci (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Using file match: ^\.woodpecker(?:/[^/]+)?\.ya?ml$ for manager woodpecker (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Matched 1 file(s) for manager npm: package.json (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: npm file package.json has name "solution-code" (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Detecting pnpm Workspaces (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Detecting Lerna and Yarn Workspaces (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Finding locked versions (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: manager extract durations (ms) (repository=ConradBohm/renovate_second_test_repo)
+       "managers": {"npm": 11}
+DEBUG: Found npm package files (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Found 1 package file(s) (repository=ConradBohm/renovate_second_test_repo)
+ INFO: Dependency extraction complete (repository=ConradBohm/renovate_second_test_repo, baseBranch=main)
+       "stats": {
+         "managers": {"npm": {"fileCount": 1, "depCount": 13}},
+         "total": {"fileCount": 1, "depCount": 13}
+       }
+DEBUG: Found deprecationMessage for npm package istanbul (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=ConradBohm/renovate_second_test_repo, baseBranch=main)
+DEBUG: Package releases lookups complete (repository=ConradBohm/renovate_second_test_repo, baseBranch=main)
+DEBUG: branchifyUpgrades (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: detectSemanticCommits() (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: getCommitMessages (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: semanticCommits: detected "unknown" (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: semanticCommits: disabled (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: 10 flattened updates found: ejs, faker, jenkins-mocha, mongoose, chai, chai-http, node-mongo-seeds, mocha, jenkins-mocha, mocha-junit-reporter (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Returning 9 branch(es) (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: config.repoIsOnboarded=true (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: packageFiles with updates (repository=ConradBohm/renovate_second_test_repo, baseBranch=main)
+       "config": {
+         "npm": [
+           {
+             "deps": [
+               {
+                 "depType": "dependencies",
+                 "depName": "ejs",
+                 "currentValue": "^2.5.2",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "3.1.9",
+                     "newValue": "^3.0.0",
+                     "releaseTimestamp": "2023-03-12T19:29:58.885Z",
+                     "newMajor": 3,
+                     "newMinor": 1,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/ejs-3.x"
+                   }
+                 ],
+                 "packageName": "ejs",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/mde/ejs",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "2.7.4",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "express",
+                 "currentValue": "^4.14.0",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [],
+                 "packageName": "express",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/expressjs/express",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "http://expressjs.com/",
+                 "currentVersion": "4.18.2"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "faker",
+                 "currentValue": "^4.1.0",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "6.6.6",
+                     "newValue": "^6.0.0",
+                     "releaseTimestamp": "2022-01-05T01:38:36.409Z",
+                     "newMajor": 6,
+                     "newMinor": 6,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/faker-6.x"
+                   }
+                 ],
+                 "packageName": "faker",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/Marak/Faker.js",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "4.1.0",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "istanbul",
+                 "currentValue": "^0.4.5",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [],
+                 "packageName": "istanbul",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "deprecationMessage": "On registry `https://registry.npmjs.org`, the \"latest\" version of dependency `istanbul` has the following deprecation notice:\n\n`This module is no longer maintained, try this instead:\n  npm i nyc\nVisit https://istanbul.js.org/integrations for other alternatives.`\n\nMarking the latest version of an npm package as deprecated results in the entire package being considered deprecated, so contact the package author you think this is a mistake.",
+                 "sourceUrl": "https://github.com/gotwarlost/istanbul",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "0.4.5"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "jenkins-mocha",
+                 "currentValue": "^3.0.4",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "11.0.0",
+                     "newValue": "^11.0.0",
+                     "releaseTimestamp": "2023-05-04T04:04:53.700Z",
+                     "newMajor": 11,
+                     "newMinor": 0,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/jenkins-mocha-11.x"
+                   }
+                 ],
+                 "packageName": "jenkins-mocha",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/stjohnjohnson/jenkins-mocha",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "3.0.4",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "mongoose",
+                 "currentValue": "^4.11.11",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "7.3.1",
+                     "newValue": "^7.0.0",
+                     "releaseTimestamp": "2023-06-21T16:34:58.333Z",
+                     "newMajor": 7,
+                     "newMinor": 3,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/mongoose-7.x"
+                   }
+                 ],
+                 "packageName": "mongoose",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/Automattic/mongoose",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://mongoosejs.com",
+                 "currentVersion": "4.13.21",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "chai",
+                 "currentValue": "^3.5.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "4.3.7",
+                     "newValue": "^4.0.0",
+                     "releaseTimestamp": "2022-11-07T16:37:56.392Z",
+                     "newMajor": 4,
+                     "newMinor": 3,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/chai-4.x"
+                   }
+                 ],
+                 "packageName": "chai",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/chaijs/chai",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "http://chaijs.com",
+                 "currentVersion": "3.5.0",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "chai-http",
+                 "currentValue": "^3.0.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "4.4.0",
+                     "newValue": "^4.0.0",
+                     "releaseTimestamp": "2023-06-09T09:12:34.047Z",
+                     "newMajor": 4,
+                     "newMinor": 4,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/chai-http-4.x"
+                   }
+                 ],
+                 "packageName": "chai-http",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/chaijs/chai-http",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "3.0.0",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "chai-jquery",
+                 "currentValue": "^2.0.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [],
+                 "packageName": "chai-jquery",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/chaijs/chai-jquery",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "2.1.0"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "node-mongo-seeds",
+                 "currentValue": "^2.3.1",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "3.1.0",
+                     "newValue": "^3.0.0",
+                     "releaseTimestamp": "2018-06-25T04:08:57.032Z",
+                     "newMajor": 3,
+                     "newMinor": 1,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/node-mongo-seeds-3.x"
+                   }
+                 ],
+                 "packageName": "node-mongo-seeds",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/toymachiner62/node-mongo-seeds",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "2.3.2",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "mocha",
+                 "currentValue": "^3.1.2",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "10.2.0",
+                     "newValue": "^10.0.0",
+                     "releaseTimestamp": "2022-12-11T14:18:56.217Z",
+                     "newMajor": 10,
+                     "newMinor": 2,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/mocha-10.x"
+                   }
+                 ],
+                 "packageName": "mocha",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/mochajs/mocha",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://mochajs.org/",
+                 "currentVersion": "3.5.3",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "jenkins-mocha",
+                 "currentValue": "^3.0.4",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "11.0.0",
+                     "newValue": "^11.0.0",
+                     "releaseTimestamp": "2023-05-04T04:04:53.700Z",
+                     "newMajor": 11,
+                     "newMinor": 0,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/jenkins-mocha-11.x"
+                   }
+                 ],
+                 "packageName": "jenkins-mocha",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/stjohnjohnson/jenkins-mocha",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "3.0.4",
+                 "isSingleVersion": false
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "mocha-junit-reporter",
+                 "currentValue": "^1.12.1",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "2.2.0",
+                     "newValue": "^2.0.0",
+                     "releaseTimestamp": "2022-11-14T17:38:21.201Z",
+                     "newMajor": 2,
+                     "newMinor": 2,
+                     "updateType": "major",
+                     "isRange": true,
+                     "branchName": "renovate/mocha-junit-reporter-2.x"
+                   }
+                 ],
+                 "packageName": "mocha-junit-reporter",
+                 "warnings": [],
+                 "versioning": "npm",
+                 "sourceUrl": "https://github.com/michaelleeallen/mocha-junit-reporter",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "currentVersion": "1.23.3",
+                 "isSingleVersion": false
+               }
+             ],
+             "packageFileVersion": "1.0.0",
+             "managerData": {
+               "packageJsonName": "solution-code",
+               "yarnZeroInstall": false,
+               "hasPackageManager": false
+             },
+             "skipInstalls": true,
+             "packageFile": "package.json",
+             "constraints": {}
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=ConradBohm/renovate_second_test_repo)
+DEBUG: Repository timing splits (milliseconds) (repository=ConradBohm/renovate_second_test_repo)
+       "splits": {"init": 4994, "extract": 337, "lookup": 2694},
+       "total": 8034
+DEBUG: Package cache statistics (repository=ConradBohm/renovate_second_test_repo)
+       "get": {"count": 12, "avgMs": 11, "medianMs": 4, "maxMs": 49},
+       "set": {"count": 12, "avgMs": 168, "medianMs": 33, "maxMs": 748}
+DEBUG: http statistics (repository=ConradBohm/renovate_second_test_repo)
+       "urls": {
+         "https://api.github.com/graphql (POST,200)": 2,
+         "https://registry.npmjs.org/chai (GET,200)": 1,
+         "https://registry.npmjs.org/chai-http (GET,200)": 1,
+         "https://registry.npmjs.org/chai-jquery (GET,200)": 1,
+         "https://registry.npmjs.org/ejs (GET,200)": 1,
+         "https://registry.npmjs.org/express (GET,200)": 1,
+         "https://registry.npmjs.org/faker (GET,200)": 1,
+         "https://registry.npmjs.org/istanbul (GET,200)": 1,
+         "https://registry.npmjs.org/jenkins-mocha (GET,200)": 1,
+         "https://registry.npmjs.org/mocha (GET,200)": 1,
+         "https://registry.npmjs.org/mocha-junit-reporter (GET,200)": 1,
+         "https://registry.npmjs.org/mongoose (GET,200)": 1,
+         "https://registry.npmjs.org/node-mongo-seeds (GET,200)": 1
+       },
+       "hostStats": {
+         "api.github.com": {"requestCount": 2, "requestAvgMs": 529, "queueAvgMs": 0},
+         "registry.npmjs.org": {
+           "requestCount": 12,
+           "requestAvgMs": 692,
+           "queueAvgMs": 0
+         }
+       },
+       "totalRequests": 14
+DEBUG: Package lookup durations (repository=ConradBohm/renovate_second_test_repo)
+       "npm": {"count": 13, "averageMs": 883, "totalMs": 11476, "maximumMs": 1935}
+DEBUG: dns cache (repository=ConradBohm/renovate_second_test_repo)
+       "hosts": []
+ INFO: Repository finished (repository=ConradBohm/renovate_second_test_repo)
+       "cloned": true,
+       "durationMs": 8034
+DEBUG: Checking file package cache for expired items
+DEBUG: Deleted 0 of 16 file cached entries in 40ms
+DEBUG: Renovate exiting
