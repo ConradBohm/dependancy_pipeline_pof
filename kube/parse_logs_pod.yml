@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Pod
+metadata:
+  name: empty
+spec:
+  template:
+    # This is the pod template
+    spec:
+      containers:
+      - name: empty
+        image: busybox:1.28
+        command: ['cat']
