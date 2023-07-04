@@ -46,6 +46,9 @@ The file `logs_sample.txt` contains logs from scanning two dummy repos:
 
 They are meant to have out-of-date dependencies, with dependency files differing in format. The parser takes those logs and produces this output:
 
+<img width="386" alt="image" src="https://github.com/ConradBohm/dependancy_pipeline_pof/assets/37579805/0835d56c-d0b7-458a-bd95-07ddd0c5437c">
+<img width="382" alt="image" src="https://github.com/ConradBohm/dependancy_pipeline_pof/assets/37579805/135e5509-325a-44f3-b429-302bcefac509">
+
 
 Extra information can be garnered from the logs; look between lines `246-372`, and `571-904` in the sample log file for the scan of each repo respectively.
 
