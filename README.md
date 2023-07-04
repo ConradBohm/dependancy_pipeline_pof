@@ -50,7 +50,7 @@ They are meant to have out-of-date dependencies, with dependency files differing
 <img width="382" alt="image" src="https://github.com/ConradBohm/dependancy_pipeline_pof/assets/37579805/135e5509-325a-44f3-b429-302bcefac509">
 
 
-Extra information can be garnered from the logs; look between lines `246-372`, and `571-904` in the sample log file for the scan of each repo respectively.
+Extra information can be garnered from the logs; look on lines `161` and `316` in the sample log file for the scan of each repo respectively.
 
 ## Next Steps
 - Run the parsing script as part of the Kubernetes job, or from a Kubernetes container using mounted volumes to get the log file from the scan.
