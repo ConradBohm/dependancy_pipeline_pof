@@ -5,6 +5,16 @@ metadata:
 spec:
   template:
     spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      restartPolicy: OnFailure
+      volumes:
+        - name: config-volume
+          configMap:
+            name: renovate-config
+        - name: log-share
+          emptyDir: {}
       containers:
         - name: renovate
           # Update this to the latest available and then enable Renovate on
@@ -26,13 +36,13 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /opt/renovate/
-            - name: work-volume
+            - name: log-share
               mountPath: /app/renovate_logs
-      restartPolicy: OnFailure
-      volumes:
-        - name: config-volume
-          configMap:
-            name: renovate-config
-        - name: work-volume
-          hostPath:
-            path: /app/renovate_logs
+
+        - name: parser
+          image: parser:latest
+          imagePullPolicy: Never
+          volumeMounts:
+            - name: log-share
+              mountPath: /app/logs
+          command: ['sh', '-c', 'sleep 90 && python3 src/logs_parser.py']

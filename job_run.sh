@@ -3,6 +3,9 @@
 KUBE_JOB_NAME='renovate-job'
 PROJECT_PATH='/Users/admin/dependancy_pipeline_pof'
 
+echo 'building parser image to local registry'
+docker build -f ./Dockerfile -t parser:latest .
+
 echo 'deleting existing job..'
 if kubectl get jobs | grep ${KUBE_JOB_NAME}; then
     echo 'deleting'
@@ -19,11 +22,4 @@ kubectl apply -f "${PROJECT_PATH}/kube/renovate_job.yml" > /dev/null &
 
 sleep 20
 echo 'waiting for job to finish'
-kubectl wait --for=condition=complete job/${KUBE_JOB_NAME}
-
-echo 'extracting logs'
-pod_name=$(kubectl get pods -o=jsonpath='{range .items..metadata}{.name}{"\n"}{end}' | grep "${KUBE_JOB_NAME}")
-kubectl logs ${pod_name} > 'logs.txt'
-
-echo 'running python script'
-python3 logs_parser.py
+kubectl wait --for=condition=complete --timeout=90s job/${KUBE_JOB_NAME} && echo 'job complete'
